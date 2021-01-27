@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+	<script type="text/babel">
+
+		let Bicicleta1 = {
+			cor: 'Branca',
+			marcha: 'Única',
+			aro: 12,
+			pedalar() {
+				console.log('Método pedalar executado')
+			}
+		}
+
+		let Bicicleta2 = {
+			cor: 'Vermelha',
+			marcha: '18',
+			aro: 26,
+			pedalar() {
+				console.log('Método pedalar executado')
+			}
+		}
+
+		console.log(Bicicleta1)
+		console.log(Bicicleta2)
+
+		//------------------------------------
+
+		let BicicletaFactory = function () {
+			//logica
+			//requisicao http
+			//resposta http
+			return {
+				cor: 'Branca',
+				marcha: 'Única',
+				aro: 12,
+				pedalar() {
+					console.log('Método pedalar executado')
+				}
+			}
+		}
+
+		let Bicicleta3 = BicicletaFactory()
+		console.log(Bicicleta3)
+
+		console.log(Bicicleta3.cor)
+		Bicicleta3.pedalar()
+
+	</script>
+	<title>Document</title>
+</head>
+
+<body>
+	<div id="output"></div>
+</body>
+
+</html>

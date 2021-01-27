@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+  <script type="text/babel">
+
+    //destructuring
+
+    let produto = {
+      descricao: 'notebook',
+      preco: 1800,
+      detalhes: {
+        fabricante: 'abc',
+        modelo: 'xyz'
+      }
+    }
+
+    //let { descricao, preco } = produto
+    //let { descricao: d, preco: p, desconto } = produto
+    //let { descricao: d, preco: p = 1000, desconto = 5 } = produto
+    let { detalhes: { fabricante: f, modelo: m } } = produto
+
+
+    //token
+    //array => []
+    //objeto => {}
+
+    console.log(f, m)
+  </script>
+  <title>Document</title>
+</head>
+
+<body>
+  <div id="output"></div>
+</body>
+
+</html>
